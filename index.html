@@ -1,1 +1,77 @@
-"Halloooo..."
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667eea' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1v6m0 6v6m5.2-10.8l-4.2 4.2m0 0l-4.2 4.2m10.4 0l-4.2-4.2m0 0l-4.2-4.2M1 12h6m6 0h6'/%3E%3C/svg%3E">
+    <title>Under Construction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in 0.3s both;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeIn 1s ease-in 0.6s both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Q4S Glowing Shield Logo with Serif Classic Font -->
+        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 20 L170 50 L170 110 Q170 160 100 180 Q30 160 30 110 L30 50 Z" 
+                  fill="url(#logoGradient)" stroke="white" stroke-width="4"/>
+            <text x="100" y="125" font-family="Georgia, serif" font-size="58" font-weight="bold" 
+                  fill="white" text-anchor="middle">Q4S</text>
+        </svg>
+
+        <h1>Under Construction</h1>
+        <p>We're working hard to bring you something amazing. :)</p>
+        <p style="font-size: smaller;">Design by <a href="https://qu-o.github.io"><em style="font-style: italic;">Quo</em></a>. &copy; <text id="tanggal">1989</text></p>
+    </div>
+    
+    <script>
+        // Tanggal saiki
+        const d = new Date();
+        const month   = d.toLocaleString(["ban", "id"], {month:'long',timeZone: "UTC"}); // months from 1-12
+        const day     = d.toLocaleString(["ban", "id"], {weekday:'long',timeZone: "UTC"});
+        const tanggal = day + ", " + d.getUTCDate()  + " " + month + " " + d.getUTCFullYear();
+        document.getElementById("tanggal").innerHTML = tanggal;
+        //console.log(tanggal);
+    </script>
+</body>
+</html>
